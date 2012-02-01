@@ -1,12 +1,12 @@
 UNDER DEVELOPMENT. DO NOT USE YET.
 
-# cover-shot
+# covershot
 
 Multi-format code coverage report generator
 
 ## Installation
 
-    $ npm install cover-shot
+    $ npm install covershot
 
 ## Usage
 
