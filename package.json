@@ -15,6 +15,9 @@
   "repositories": [
     { "type": "git", "url": "https://github.com/nearinfinity/node-cover-shot.git" }
   ],
+  "dependencies": {
+    "jade": "~0.20.0"
+  },
   "devDependencies": {
     "vows": "~0.5.13"
   },
