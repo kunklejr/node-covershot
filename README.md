@@ -1,3 +1,5 @@
+UNDER DEVELOPMENT. DO NOT USE YET.
+
 # cover-shot
 
 Code coverage report generator that's easy on the eyes
