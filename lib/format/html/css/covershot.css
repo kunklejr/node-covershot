@@ -29,7 +29,6 @@ header {
 h1 {
 	line-height: 50px;
 	text-shadow: 1px 1px 1px #fff;
-	color: rgba(0, 0, 0, 0.85);
 	font-size: 42px;
 }
 
@@ -123,6 +122,7 @@ table th:last-child, table td:last-child {
 a {
 	color: rgba(4, 64, 173, 1.0);
 	text-decoration: none;
+	cursor: auto;
 }
 
 a:hover {
