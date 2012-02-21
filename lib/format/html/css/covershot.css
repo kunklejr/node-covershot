@@ -172,3 +172,15 @@ footer {
 footer p {
 	padding: 20px 10px 10px 25px;
 }
+
+/*
+ * Src page
+ */
+
+.red {
+	background-color: red;
+}
+
+.green {
+	background-color: #79FC79;
+}
