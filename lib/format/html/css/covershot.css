@@ -78,6 +78,11 @@ ul.summary li:first-child h1 {
 	font-size: 32px;
 }
 
+ul.summary li:first-child h3 {
+	font-size: 14px;
+	color: gray;
+}
+
 ul.summary li p {
 	display: block;
 }
