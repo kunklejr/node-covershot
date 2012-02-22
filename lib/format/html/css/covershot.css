@@ -177,10 +177,10 @@ footer p {
  * Src page
  */
 
-.red {
-	background-color: red;
-}
-
-.green {
-	background-color: #79FC79;
+div.rounded {
+	width: 1100px !important;
+	margin: auto !important;
+	padding: 25px !important;
+	border-radius: 7px;
+	background-color: rgba(255, 255, 255, 0.22);
 }
