@@ -32,13 +32,16 @@
 .syntaxhighlighter table caption {
   color: black !important;
 }
-.syntaxhighlighter .gutter {
-  color: #afafaf !important;
+.syntaxhighlighter .gutter,.syntaxhighlighter .covgutter {
+  color: #000 !important;
+}
+.syntaxhighlighter .covgutter .line {
+  border-right: 1px solid #6ce26c !important;
 }
 .syntaxhighlighter .gutter .line {
   border-right: 3px solid #6ce26c !important;
 }
-.syntaxhighlighter .gutter .line.highlighted {
+.syntaxhighlighter .gutter .line.highlighted, .syntaxhighlighter .covgutter .line.highlighted {
   background-color: #6ce26c !important;
   color: white !important;
 }
