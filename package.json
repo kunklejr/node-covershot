@@ -3,20 +3,21 @@
   "description": "Code coverage report generator that's easy on the eyes",
   "author": "Jeff Kunkle <jeff.kunkle@nearinfinity.com>",
   "keywords": ["test", "coverage", "reporter"],
-  "homepage": "https://github.com/nearinfinity/node-cover-shot",
+  "homepage": "https://github.com/nearinfinity/node-covershot",
   "version": "0.0.1",
   "engines": { "node" : ">=0.6.0" },
   "maintainers": [
     { "name": "Jeff Kunkle", "email": "jeff.kunkle@nearinfinity.com" },
-    { "name": "Joe Ferner", "email": "joe.ferner@nearinfinity.com" }
+    { "name": "Sean Pilkenton", "email": "sean.pilkenton@nearinfinity.com" }
   ],
-  "bugs": { "url": "https://github.com/nearinfinity/node-cover-shot/issues" },
+  "bugs": { "url": "https://github.com/nearinfinity/node-covershot/issues" },
   "licenses": [ { "type" : "MIT" } ],
   "repositories": [
-    { "type": "git", "url": "https://github.com/nearinfinity/node-cover-shot.git" }
+    { "type": "git", "url": "https://github.com/nearinfinity/node-covershot.git" }
   ],
   "dependencies": {
-    "jade": "~0.20.0"
+    "ejs": "~0.6.1",
+    "optimist": "~0.3.1"
   },
   "devDependencies": {
     "vows": "~0.5.13"
