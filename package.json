@@ -3,7 +3,6 @@
   "description": "Code coverage report generator that's easy on the eyes",
   "author": "Jeff Kunkle <jeff.kunkle@nearinfinity.com>",
   "keywords": ["test", "coverage", "reporter"],
-  "homepage": "https://github.com/nearinfinity/node-covershot",
   "version": "0.0.1",
   "engines": { "node" : ">=0.6.0" },
   "maintainers": [
@@ -11,8 +10,8 @@
     { "name": "Sean Pilkenton", "email": "sean.pilkenton@nearinfinity.com" }
   ],
   "bugs": { "url": "https://github.com/nearinfinity/node-covershot/issues" },
-  "licenses": [ { "type" : "MIT" } ],
-  "repositories": [
+  "license": "MIT",
+  "repository": [
     { "type": "git", "url": "https://github.com/nearinfinity/node-covershot.git" }
   ],
   "dependencies": {
