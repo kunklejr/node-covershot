@@ -1,0 +1,186 @@
+html, body {
+	/*height: 100%;*/
+}
+
+body {	
+	/*margin: 0px;*/
+	padding: 0px;
+	background: #000 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAIAAAC1nk4lAAAC7mlDQ1BJQ0MgUHJvZmlsZQAAeAGFVM9rE0EU/jZuqdAiCFprDrJ4kCJJWatoRdQ2/RFiawzbH7ZFkGQzSdZuNuvuJrWliOTi0SreRe2hB/+AHnrwZC9KhVpFKN6rKGKhFy3xzW5MtqXqwM5+8943731vdt8ADXLSNPWABOQNx1KiEWlsfEJq/IgAjqIJQTQlVdvsTiQGQYNz+Xvn2HoPgVtWw3v7d7J3rZrStpoHhP1A4Eea2Sqw7xdxClkSAog836Epx3QI3+PY8uyPOU55eMG1Dys9xFkifEA1Lc5/TbhTzSXTQINIOJT1cVI+nNeLlNcdB2luZsbIEL1PkKa7zO6rYqGcTvYOkL2d9H5Os94+wiHCCxmtP0a4jZ71jNU/4mHhpObEhj0cGDX0+GAVtxqp+DXCFF8QTSeiVHHZLg3xmK79VvJKgnCQOMpkYYBzWkhP10xu+LqHBX0m1xOv4ndWUeF5jxNn3tTd70XaAq8wDh0MGgyaDUhQEEUEYZiwUECGPBoxNLJyPyOrBhuTezJ1JGq7dGJEsUF7Ntw9t1Gk3Tz+KCJxlEO1CJL8Qf4qr8lP5Xn5y1yw2Fb3lK2bmrry4DvF5Zm5Gh7X08jjc01efJXUdpNXR5aseXq8muwaP+xXlzHmgjWPxHOw+/EtX5XMlymMFMXjVfPqS4R1WjE3359sfzs94i7PLrXWc62JizdWm5dn/WpI++6qvJPmVflPXvXx/GfNxGPiKTEmdornIYmXxS7xkthLqwviYG3HCJ2VhinSbZH6JNVgYJq89S9dP1t4vUZ/DPVRlBnM0lSJ93/CKmQ0nbkOb/qP28f8F+T3iuefKAIvbODImbptU3HvEKFlpW5zrgIXv9F98LZua6N+OPwEWDyrFq1SNZ8gvAEcdod6HugpmNOWls05Uocsn5O66cpiUsxQ20NSUtcl12VLFrOZVWLpdtiZ0x1uHKE5QvfEp0plk/qv8RGw/bBS+fmsUtl+ThrWgZf6b8C8/UXAeIuJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzUlEQVRoBe2WMQrDQBADN8FJ2hD8/386aWJwc5UqIRCMC3MgEMcwXu9t/7xn5vF8ne/f96g4b13XvbDeT7R1z9aixHrPTtI4Hfo6cDoEepjTMdLr/Gs5M6dTK1cn6RaP13t2kmb3CA1qdo8QaHaPFOjB6RRq9ukY6fWf3nJm92CfFh8Ic1rAsUbMaStOUYbTAo41wmkrTlGG0wKONcJpK05RhtMCjjXCaStOUYbTAo41wmkrTlGG0wKONcJpK05RhtMCjjXCaStOUVbp9B/lpXFHC0d5AwAAAABJRU5ErkJggg==) repeat; 
+	font-family:  "Georgia", serif;
+	text-shadow: 0px 1px 1px #fff;
+}
+
+div#bodyWrapper {
+	background: #def6d6 url(../resources/covershot_bg.png) repeat 50% 50%;
+	min-height: 550px;
+	padding: 0px 20px 85px 20px;
+	margin: auto;
+	position: relative;
+}
+
+header {
+	height: 200px;
+	width: 1200px;
+	margin: 0px auto;
+	padding-top: 40px;
+	text-align: center;
+}
+
+h1 {
+	line-height: 50px;
+	text-shadow: 1px 1px 1px #fff;
+	font-size: 42px;
+}
+
+h3 {
+	line-height: 30px;
+	font-size: 18px;
+}
+
+h1, h3 {
+	padding: 0;
+	margin: 0;
+	word-wrap: normal;
+	text-overflow: ellipsis;
+	/*display: inline;*/
+}
+
+ul.summary {
+	margin: 0px auto;
+	padding: 0px 0px 20px 0px;
+	/*width: 1200px;*/
+	/*width: 100%;*/
+	list-style-type: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+ul.summary::after {
+	content: "";
+	display: block;
+	position: relative;
+	top: 22px;
+	height: 1px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.75);
+	clear: both;
+}
+
+ul.summary li {
+	display: inline;
+	text-align: center;
+	float: left;
+	position: relative;
+	min-width: 200px;
+	left: 77px;
+}
+
+ul.summary li:first-child h1 {
+	font-size: 32px;
+}
+
+ul.summary li p {
+	display: block;
+}
+
+section#mainContent table {
+	width: 100%;
+	text-align: left;
+}
+
+section#mainContent table th {
+	/*padding: 5px;*/
+}
+
+table tbody tr {
+	font-size: 16px;
+}
+
+table tbody tr:nth-child(odd) {
+	background-color: rgba(255, 255, 255, 0.30);
+}
+
+table tbody tr:nth-child(even) {
+	/*background-color: rgba(100, 100, 100, 0.09);*/
+}
+
+table th {
+	/*padding-top: 10px;*/
+	/*padding-bottom: 10px;*/
+	padding: 10px 0px 10px 10px;
+	font-size: 18px;
+}
+
+td {
+	margin-top: 4px;
+	padding-left: 13px;
+}
+
+table th:last-child, table td:last-child {
+	border-right: 0px;
+}
+
+a {
+	color: rgba(4, 64, 173, 1.0);
+	text-decoration: none;
+	cursor: auto;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+section#bod {
+	/*min-height: 400px;*/
+	padding-top: 5px;
+	/*width: 90%;*/
+	width: 1200px;
+	margin: auto;
+	position: relative;
+	/*padding-bottom: 100px;*/
+}
+
+section#mainContent {
+	margin: 0px auto; 
+
+	/*box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35), inset 0 2px 5px 0px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(0, 0, 0, 0.6);*/
+
+	/*padding: 15px 10px 10px 10px;*/
+	/*background-color: rgba(240, 245, 230, 1.0);*/
+	/*background-color: rgba(255, 255, 255, 1.0);*/
+}
+
+footer::before {
+	content: "";
+	width: 100%;
+	height: 1px;
+	position: relative;
+	background-color: rgba(255, 255, 255, 0.22);
+	display: block;
+	z-index: 3;
+	top: -1px;
+}
+
+footer {
+	width: 100%;
+	box-shadow: inset 0 8px 5px -3px rgba(0,0,0,.6);
+	height: 100px;
+	color: rgba(236, 246, 217, 1.0);
+	color: #fff;
+	text-shadow: 0px -1px 1px #000;
+}
+
+footer p {
+	padding: 20px 10px 10px 25px;
+}
+
+/*
+ * Src page
+ */
+
+div.rounded {
+	width: 1100px !important;
+	margin: auto !important;
+	padding: 25px !important;
+	border-radius: 7px;
+	background-color: rgba(255, 255, 255, 0.22);
+}
