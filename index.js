@@ -1,9 +1,49 @@
 var fs = require('fs');
 var merge = require('./lib/merge');
 var async = require('async');
+var path = require('path');
 
 exports.format = require('./lib/format');
 exports.map = require('./lib/map');
+
+function readAllFiles(filename, callback) {
+  fs.stat(filename, function (err, stat) {
+    if (err) {
+      return callback(err);
+    }
+    if (stat.isFile()) {
+      return fs.readFile(filename, function (err, data) {
+        if (err) {
+          return callback(err);
+        }
+        callback(null, [data]);
+      });
+    }
+
+    fs.readdir(filename, function (err, filenames) {
+      if (err) {
+        return callback(err);
+      }
+      filenames = filenames.filter(function (fname) { return !(/\..*/.test(fname)); });
+      filenames = filenames.map(function (fname) { return path.join(filename, fname); });
+      var results = [];
+      async.forEach(
+        filenames,
+        function (filename, callback) {
+          readAllFiles(filename, function (err, datas) {
+            if (err) {
+              return callback(err);
+            }
+            results = results.concat(datas);
+            callback();
+          });
+        },
+        function (err) {
+          callback(err, results);
+        });
+    });
+  });
+}
 
 exports.run = function (options, callback) {
   callback = callback || function () {};
@@ -26,15 +66,27 @@ exports.run = function (options, callback) {
     });
     process.stdin.resume();
   } else {
-    async.mapSeries(files, fs.readFile, function (err, results) {
-      if (err) {
-        console.error(err);
-        return process.exit(1);
-      }
-      results = results.map(function (buffer) {return mapper.map(buffer.toString()); });
-      var data = merge(results);
-      formatter.report(data, options.write);
-      callback();
-    });
+    var results = [];
+    async.forEachSeries(
+      files,
+      function (filename, callback) {
+        readAllFiles(filename, function (err, fileData) {
+          if (err) {
+            return callback(err);
+          }
+          results = results.concat(fileData);
+          callback();
+        });
+      },
+      function (err) {
+        if (err) {
+          console.error(err);
+          return process.exit(1);
+        }
+        results = results.map(function (buffer) {return mapper.map(buffer.toString()); });
+        var data = merge(results);
+        formatter.report(data, options.write);
+        callback();
+      });
   }
 };
