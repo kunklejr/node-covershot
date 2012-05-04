@@ -2,7 +2,7 @@
 var fs = require('fs');
 var path = require('path');
 var optimist = require('optimist');
-var covershot = require('../');
+var covershot = require('../index');
 
 var argv = optimist
   .usage('Usage: covershot [options] [file]')
