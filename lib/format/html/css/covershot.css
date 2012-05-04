@@ -93,6 +93,7 @@ section#mainContent table th {
 
 table tbody tr {
 	font-size: 16px;
+	text-align: center;
 }
 
 table tbody tr:nth-child(odd) {
@@ -104,10 +105,9 @@ table tbody tr:nth-child(even) {
 }
 
 table th {
-	/*padding-top: 10px;*/
-	/*padding-bottom: 10px;*/
 	padding: 10px 0px 10px 10px;
 	font-size: 18px;
+	text-align: center;
 }
 
 td {
@@ -181,6 +181,6 @@ div.rounded {
 	width: 1100px !important;
 	margin: auto !important;
 	padding: 25px !important;
-	border-radius: 7px;
+	border-radius: 3px;
 	background-color: rgba(255, 255, 255, 0.22);
 }
