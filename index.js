@@ -24,7 +24,7 @@ function readAllFiles(filename, callback) {
       if (err) {
         return callback(err);
       }
-      filenames = filenames.filter(function (fname) { return !(/\..*/.test(fname)); });
+      filenames = filenames.filter(function (fname) { return !(/^\..*$/.test(fname)); });
       filenames = filenames.map(function (fname) { return path.join(filename, fname); });
       var results = [];
       async.forEach(
