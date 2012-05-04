@@ -47,6 +47,7 @@ function readAllFiles(filename, callback) {
 
 exports.run = function (options, callback) {
   callback = callback || function () {};
+  options.map = options.map || 'json';
   var mapper = require('./lib/map/' + options.map);
   var formatter = require('./lib/format/' + options.f);
 
@@ -60,8 +61,8 @@ exports.run = function (options, callback) {
     });
     process.stdin.on('end', function () {
       var data = buffers.join('');
-      var mappedOutput = mapper.map(data);
-      formatter.report(mappedOutput, options.write);
+      data = mapper.map(data);
+      formatter.report(data, options.write);
       callback();
     });
     process.stdin.resume();
