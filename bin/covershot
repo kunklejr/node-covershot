@@ -2,6 +2,7 @@
 var fs = require('fs');
 var path = require('path');
 var optimist = require('optimist');
+var covershot = require('../');
 
 var argv = optimist
   .usage('Usage: covershot [options] [file]')
@@ -38,19 +39,4 @@ if (argv.help) {
   process.exit(0);
 }
 
-var file = argv._.shift();
-var input = file !== undefined ? fs.createReadStream(file) : process.stdin;
-var buffer = [];
-
-input.on('data', buffer.push.bind(buffer));
-input.on('error', function(err) {
-  console.error(err);
-  process.exit(1);
-});
-input.on('end', function() {
-  var mapper = require('../lib/map/' + argv.map);
-  var mappedOutput = mapper.map(buffer);
-  var formatter = require('../lib/format/' + argv.f);
-  formatter.report(mappedOutput, argv.write);
-});
-input.resume();
+covershot.run(argv);
