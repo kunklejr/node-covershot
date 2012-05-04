@@ -17,6 +17,14 @@
   "dependencies": {
     "ejs": "~0.6.1",
     "optimist": "~0.3.1",
-    "async": "0.1.18"
+    "async": "0.1.18",
+    "mkdirp": "~0.3.2"
+  },
+  "devDependencies": {
+    "mocha": "~1.0.3",
+    "chai": "~0.5.3"
+  },
+  "scripts": {
+    "test": "mocha --globals '_$jscoverage'"
   }
 }
