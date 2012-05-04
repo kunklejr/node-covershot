@@ -3,9 +3,6 @@ var merge = require('./lib/merge');
 var async = require('async');
 var path = require('path');
 
-exports.format = require('./lib/format');
-exports.map = require('./lib/map');
-
 function readAllFiles(filename, callback) {
   fs.stat(filename, function (err, stat) {
     if (err) {
