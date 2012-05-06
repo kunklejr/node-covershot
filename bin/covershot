@@ -13,7 +13,8 @@ var argv = optimist
   })
   .options('m', {
     alias: 'map',
-    describe: 'Input data format mapper to use. [vows]'
+    default: 'json',
+    describe: 'Input data format mapper to use. [json, vows]'
   })
   .options('w', {
     alias: 'write',
