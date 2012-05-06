@@ -2,7 +2,7 @@
 var fs = require('fs');
 var path = require('path');
 var optimist = require('optimist');
-var covershot = require('../index');
+var cli = require('../lib/cli');
 
 var argv = optimist
   .usage('Usage: covershot [options] [file]')
@@ -38,4 +38,4 @@ if (argv.help) {
   process.exit(0);
 }
 
-covershot.run(argv);
+cli.run(argv);
