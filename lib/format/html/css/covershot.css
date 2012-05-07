@@ -11,7 +11,7 @@ body {
 }
 
 div#bodyWrapper {
-	background: #def6d6 url(../resources/covershot_bg.png) repeat 50% 50%;
+	background-color: rgb(220, 226, 219);
 	min-height: 550px;
 	padding: 0px 20px 85px 20px;
 	margin: auto;
@@ -104,6 +104,10 @@ table tbody tr:nth-child(even) {
 	/*background-color: rgba(100, 100, 100, 0.09);*/
 }
 
+table tbody tr td:first-child {
+	text-align: left;
+}
+
 table th {
 	padding: 10px 0px 10px 10px;
 	font-size: 18px;
@@ -113,6 +117,10 @@ table th {
 td {
 	margin-top: 4px;
 	padding-left: 13px;
+}
+
+.hidden {
+	display: none;
 }
 
 table th:last-child, table td:last-child {
