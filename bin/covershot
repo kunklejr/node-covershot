@@ -2,7 +2,7 @@
 var fs = require('fs');
 var path = require('path');
 var optimist = require('optimist');
-var covershot = require('../index');
+var cli = require('../lib/cli');
 
 var argv = optimist
   .usage('Usage: covershot [options] [file]')
@@ -13,7 +13,8 @@ var argv = optimist
   })
   .options('m', {
     alias: 'map',
-    describe: 'Input data format mapper to use. [vows]'
+    default: 'json',
+    describe: 'Input data format mapper to use. [json, vows]'
   })
   .options('w', {
     alias: 'write',
@@ -38,4 +39,4 @@ if (argv.help) {
   process.exit(0);
 }
 
-covershot.run(argv);
+cli.run(argv);

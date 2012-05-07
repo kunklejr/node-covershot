@@ -74,10 +74,6 @@ ul.summary li {
 	left: 77px;
 }
 
-ul.summary li:first-child h1 {
-	font-size: 32px;
-}
-
 ul.summary li p {
 	display: block;
 }
@@ -94,6 +90,10 @@ section#mainContent table th {
 table tbody tr {
 	font-size: 16px;
 	text-align: center;
+}
+
+table tbody tr td:first-child {
+    text-align: left;
 }
 
 table tbody tr:nth-child(odd) {
