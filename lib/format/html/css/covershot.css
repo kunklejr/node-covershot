@@ -11,7 +11,7 @@ body {
 }
 
 div#bodyWrapper {
-	background-color: rgb(220, 226, 219);
+	background-color: rgb(220, 222, 219);
 	min-height: 550px;
 	padding: 0px 20px 85px 20px;
 	margin: auto;
@@ -112,6 +112,21 @@ table th {
 	padding: 10px 0px 10px 10px;
 	font-size: 18px;
 	text-align: center;
+	position: relative;
+	cursor: pointer;
+}
+
+th.sorted.ascending:after, th.sorted.descending:after {
+	position: absolute;
+	font-weight: normal;
+}
+
+th.sorted.ascending:after {
+    content: "  \2191";
+}
+
+th.sorted.descending:after {
+    content: " \2193";
 }
 
 td {
