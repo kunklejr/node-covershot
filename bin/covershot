@@ -27,11 +27,6 @@ var argv = optimist
   })
   .alias('help', 'h')
   .alias('h', '?')
-  .check(function(argv) {
-    if (argv.f !== 'html' && argv.f !== 'json' && argv.f !== 'plain') {
-      throw new Error('Invalid --format');
-    }
-  })
   .argv;
 
 if (argv.help) {
