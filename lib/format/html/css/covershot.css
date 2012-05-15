@@ -3,7 +3,6 @@ html, body {
 }
 
 body {
-    /*margin: 0px;*/
     padding: 0px;
     font-family: "Georgia", serif;
     text-shadow: 0px 1px 1px #fff;
@@ -35,7 +34,6 @@ h3 {
 }
 
 div#bodyWrapper {
-    /*min-height: 550px;*/
     padding: 0px 20px 35px 20px;
     margin: auto;
     position: relative;
@@ -64,15 +62,23 @@ ul.summary li {
 }
 
 ul.summary li h3 {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.042);
     padding: 0px 6px;
+/*    -webkit-transition:all 0.25s ease;
+    -moz-transition:all 0.25s ease;
+    -o-transition:all 0.25s ease;
+    -ms-transition:all 0.25s ease;
+    transition:all 0.25s ease;*/
 }
 
+/*ul.summary li h3:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+}*/
+
 span.coverageData {
-    color: rgb(0, 194, 214);
-    /*color: #DAA520;*/
-    color: #000;
     font-size: 18px;
 }
 
@@ -191,8 +197,7 @@ footer p a {
 div.rounded {
     width: 1100px !important;
     margin: auto !important;
-    padding: 25px !important;
+    padding: 20px !important;
     border-radius: 3px;
     font-size: 13px !important;
-    /*background-color: rgba(0, 0, 0, 0.04) !important;*/
 }
