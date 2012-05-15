@@ -35,7 +35,7 @@ h3 {
 }
 
 div#bodyWrapper {
-    min-height: 550px;
+    /*min-height: 550px;*/
     padding: 0px 20px 35px 20px;
     margin: auto;
     position: relative;
@@ -63,10 +63,17 @@ ul.summary li {
     padding-right: 25px;
 }
 
+ul.summary li h3 {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.042);
+    padding: 0px 6px;
+}
+
 span.coverageData {
     color: rgb(0, 194, 214);
-    color: rgb(247, 78, 5);
-    /*color: rgba(3, 34, 132, 1.0);*/
+    /*color: #DAA520;*/
+    color: #000;
+    font-size: 18px;
 }
 
 section#mainContent table {
@@ -135,18 +142,13 @@ table th:last-child, table td:last-child {
 }
 
 section#bod {
-    /*min-height: 400px;*/
-    padding-top: 5px;
-    /*width: 90%;*/
     width: 1200px;
     margin: auto;
     position: relative;
-    /*padding-bottom: 100px;*/
-
-        border-radius: 3px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.07);
-        background-color: rgba(255, 255, 255, 0.48);
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.07);
+    background-color: rgba(255, 255, 255, 0.48);
 }
 
 section#mainContent {
@@ -174,10 +176,23 @@ footer p a {
  * Src page
  */
 
+ .green {
+    color: green !important;
+ }
+
+ .yellow {
+    color: yellow !important;
+ }
+
+ .red {
+    color: red !important;
+ }
+
 div.rounded {
     width: 1100px !important;
     margin: auto !important;
     padding: 25px !important;
     border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.04) !important;
+    font-size: 13px !important;
+    /*background-color: rgba(0, 0, 0, 0.04) !important;*/
 }
