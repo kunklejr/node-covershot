@@ -25,12 +25,25 @@ h1 {
 }
 
 h3 {
-    line-height: 30px;
+    /*line-height: 30px;*/
     font-size: 15px;
-    padding: 0;
     margin: 0;
     word-wrap: normal;
     text-overflow: ellipsis;
+    padding: 6px 6px;
+}
+
+aside#homeButton {
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    z-index: 100;
+}
+
+aside#homeButton img {
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
 }
 
 div#bodyWrapper {
@@ -41,15 +54,20 @@ div#bodyWrapper {
 
 header {
     width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 45px;
-    padding-top: 40px;
+    margin: 45px auto; 
+    padding-bottom: 45px;
+}
+
+aside#hotspotsLinkContainer {
+    margin: 0;
+    padding: 0;
+    float: right;
 }
 
 ul.summary {
     margin: 0px auto;
-    padding: 0px 0px 20px 0px;
+    padding: 0px;
+    float: left;
     list-style-type: none;
 }
 
@@ -66,7 +84,6 @@ ul.summary li h3 {
     -moz-border-radius: 3px;
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.042);
-    padding: 0px 6px;
 /*    -webkit-transition:all 0.25s ease;
     -moz-transition:all 0.25s ease;
     -o-transition:all 0.25s ease;
@@ -77,6 +94,7 @@ ul.summary li h3 {
 /*ul.summary li h3:hover {
     background-color: rgba(0, 0, 0, 0.12);
 }*/
+
 
 span.coverageData {
     font-size: 18px;
@@ -148,6 +166,7 @@ table th:last-child, table td:last-child {
 }
 
 section#bod {
+    clear: both;
     width: 1200px;
     margin: auto;
     position: relative;
