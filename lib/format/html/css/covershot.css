@@ -31,6 +31,18 @@ h3 {
     margin: 0;
     word-wrap: normal;
     text-overflow: ellipsis;
+    padding: 0px 6px;
+}
+
+div.columnize {
+    display: table;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+div.columnize > * {
+    display: table-cell;
 }
 
 aside#homeButton {
@@ -56,13 +68,14 @@ header {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 45px;
+    padding-bottom: 45px;
     padding-top: 40px;
 }
 
 ul.summary {
     margin: 0px auto;
     padding: 0px 0px 20px 0px;
+    /*padding: 0px;*/
     list-style-type: none;
 }
 
@@ -79,7 +92,6 @@ ul.summary li h3 {
     -moz-border-radius: 3px;
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.042);
-    padding: 0px 6px;
 /*    -webkit-transition:all 0.25s ease;
     -moz-transition:all 0.25s ease;
     -o-transition:all 0.25s ease;
@@ -90,6 +102,12 @@ ul.summary li h3 {
 /*ul.summary li h3:hover {
     background-color: rgba(0, 0, 0, 0.12);
 }*/
+
+aside#hotspotsLinkContainer, aside#hotspotsLinkContainer * {
+    /*text-align: right;*/
+    margin: 0;
+    padding: 0;
+}
 
 span.coverageData {
     font-size: 18px;
