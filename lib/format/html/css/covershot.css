@@ -33,6 +33,19 @@ h3 {
     text-overflow: ellipsis;
 }
 
+aside#homeButton {
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    z-index: 100;
+}
+
+aside#homeButton img {
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+
 div#bodyWrapper {
     padding: 0px 20px 35px 20px;
     margin: auto;
