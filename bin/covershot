@@ -18,7 +18,7 @@ var argv = optimist
   })
   .options('w', {
     alias: 'write',
-    default: path.join(process.cwd(), 'coverage'),
+    default: path.join(process.cwd(), 'covershot'),
     describe: 'Directory to write output to.'
   })
   .options('v', {
