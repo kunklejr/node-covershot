@@ -1,17 +1,45 @@
-UNDER DEVELOPMENT. DO NOT USE YET.
-
 # covershot
 
-Multi-format code coverage report generator
+Multi-format, test framework agnostic, code coverage report generator.
 
 ## Installation
-
+ 
     $ npm install covershot
 
 ## Usage
 
+- use covershot's require in your unit tests
+
 ```javascript
+var csrequire = require('covershot').require.bind(null, require);
+var myLibrary = csrequire('../lib/myLibrary');
 ```
+
+- instrument your code using [jscoverage](http://siliconforks.com/jscoverage/)
+
+```bash
+jscoverage --no-highlight lib lib-cov
+```
+
+- generate code metrics (optional) using [jsmeter](https://github.com/joeferner/node-jsmeter)
+
+```bash
+./node_modules/node-jsmeter/bin/jsmeter.js -o ./covershot/jsmeter/ ./lib/
+```
+
+- run your unit tests
+
+```bash
+npm test
+```
+
+- generate a coverage report
+
+```bash
+./node_modules/covershot/bin/covershot covershot/data -f html -f clover -f json
+```
+
+### 
 
 ## License
 
