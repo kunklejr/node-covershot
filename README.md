@@ -39,6 +39,10 @@ npm test
 ./node_modules/covershot/bin/covershot covershot/data -f html -f clover -f json
 ```
 
+## Example report
+
+![coverage!](https://github.com/nearinfinity/node-covershot/raw/master/examples/coverage.png)
+
 ### 
 
 ## License
