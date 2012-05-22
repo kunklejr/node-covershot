@@ -8,6 +8,13 @@ Multi-format, test framework agnostic, code coverage report generator.
 
 ## Usage
 
+- use covershot's require in your unit tests
+
+```javascript
+var csrequire = require('covershot').require.bind(null, require);
+var myLibrary = csrequire('../lib/myLibrary');
+```
+
 - instrument your code using [jscoverage](http://siliconforks.com/jscoverage/)
 
 ```bash
