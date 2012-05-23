@@ -213,7 +213,7 @@ ul.summary {
 ul.summary li {
     display: inline;
     float: left;
-    /*text-align: center;*/
+    text-align: center;
     position: relative;
     padding: 10px 5px 5px 25px;
     height: 55px;
