@@ -5,16 +5,14 @@ html, body {
 body {
     margin: 0px;
     padding: 0px;
-    /*font-family: "Georgia", serif;*/
-    /*font-family: "Monaco", monospace;*/
     font-family: "Helvetica", sans-serif;
-    background: #F4F4F4 url(../resources/body.gif);
+    background: rgb(237, 237, 237);
 }
 
 a {
     color: rgba(3, 34, 172, 1.0);
     text-decoration: none;
-    cursor: auto;
+    cursor: pointer;
 }
 
 a:hover {
@@ -28,12 +26,9 @@ h1 {
 }
 
 h3 {
-    /*line-height: 30px;*/
     display: inline;
     font-size: 15px;
     margin: 0;
-    /*word-wrap: normal;*/
-    /*text-overflow: ellipsis;*/
     padding: 6px 6px;
 }
 
@@ -68,24 +63,39 @@ aside#homeButton img {
 .right {
     text-align: right;
     float: right;
-    color: #999;
 }
 
 .right a {
-    color: white;
+    color: #999;
+    padding: 1px 5px;
+    border-right: 1px solid #333;
+}
+
+.right a:last-child {
+    border-right: 0;
+    padding-right: 0px;
+}
+
+a.selectedFeature {
+    color: #fff;
+    text-decoration: none;
 }
 
 div#topContainer {
     width: 100%;
     position: fixed;
     z-index: 9;
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.57);
     color: white;
     background-color: rgba(88, 88, 88, 0.94);
+    -webkit-transition:all 0.45s ease;
+    -moz-transition:all 0.45s ease;
+    -o-transition:all 0.45s ease;
+    -ms-transition:all 0.45s ease;
+    transition:all 0.45s ease;
 }
 
-div.scrollingContainer {
-
+.shadowed {
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.57);
 }
 
 div#topContainer p, div#topContainer ul {
@@ -113,7 +123,7 @@ div#topBarContent {
     padding: 0px 40px;
     max-width: 1200px;
     min-width: 900px;
-
+    color: #fff;
     position: relative;
 }
 
@@ -132,20 +142,9 @@ div#bottomBar {
     padding: 0px 40px;
     max-width: 1200px;
     min-width: 900px;
-
-    /*clear: both;*/
-
-    /*background-color: rgba(0, 0, 0, 0.65);
-    */
-    /*background: -webkit-linear-gradient(top, rgba(2, 2, 2, 0.85), rgba(2, 2, 2, 0.80) 92%);
-    background: -moz-linear-gradient(top, rgba(2, 2, 2, 0.85), rgba(2, 2, 2, 0.80) 92%);
-    background: -o-linear-gradient(top, rgba(2, 2, 2, 0.85), rgba(2, 2, 2, 0.80) 92%);
-    background: -ms-linear-gradient(top, rgba(2, 2, 2, 0.85), rgba(2, 2, 2, 0.80) 92%);
-    background: linear-gradient(top, rgba(2, 2, 2, 0.85), rgba(2, 2, 2, 0.80) 92%);    */
-
-/*    background: -webkit-linear-gradient(top, rgba(12, 12, 12, 0.95), rgba(12, 12, 12, 0.87) 92%);
-    background: linear-gradient(top, rgba(12, 12, 12, 0.95), rgba(12, 12, 12, 0.87) 92%);*/
     width: 100%;
+    color: white;
+    text-shadow: 0px -1px 1px #000; 
 
     -webkit-transition:all 0.25s ease;
     -moz-transition:all 0.25s ease;
@@ -157,17 +156,7 @@ div#bottomBar {
 
 .clearBG {
     background-color: rgba(0, 0, 0, 0.0);
-    /*text-shadow: 0px 1px 1px #fff;*/
     color: black;
-}
-
-.darkBG {
-    color: white;
-    /*box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.57);*/
-    /*background-color: -webkit-linear-gradient(top, rgba(88, 88, 88, 0.97), rgba(88, 88, 88, 0.93) 98%);*/
-    /*background-color: rgba(88, 88, 88, 0.97);*/
-
-    text-shadow: 0px -1px 1px #000; 
 }
 
 div.holder {    
@@ -182,19 +171,9 @@ li {
 /**********************************/
 
 div#bodyWrapper {
-    padding: 0px 40px 35px 40px;
-    /*margin: auto;*/
+    padding: 140px 40px 35px 40px;
     position: relative;
     text-shadow: 0px 1px 1px #fff;
-}
-
-header {
-    max-width: 1200px;
-    min-width: 900px;
-    margin: 47px auto; 
-    margin-top: 0px;
-    padding-top: 45px;
-    padding-bottom: 45px;
 }
 
 aside#hotspotsLinkContainer {
