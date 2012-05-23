@@ -32,19 +32,6 @@ h3 {
     padding: 6px 6px;
 }
 
-aside#homeButton {
-    position: fixed;
-    left: 5px;
-    top: 5px;
-    z-index: 100;
-}
-
-aside#homeButton img {
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
-}
-
 /*****************************/
 
 .left, .right {
@@ -102,10 +89,6 @@ div#topContainer p, div#topContainer ul {
     margin: 0px;
 }
 
-div#topContainer div#topBar, div#topContainer div#bottomBar {
-
-}
-
 div#topBar {
     overflow: hidden;
     width: 100%;
@@ -133,7 +116,6 @@ div#topBarContent:after {
 }
 
 div#topBar p {
-    /*position: absolute;*/
     padding: 5px;
 }
 
@@ -214,20 +196,6 @@ ul.summary li p {
     text-align: center;
     font-size: 14px;
 }
-
-ul.summary li h3 {
-
-/*    -webkit-transition:all 0.25s ease;
-    -moz-transition:all 0.25s ease;
-    -o-transition:all 0.25s ease;
-    -ms-transition:all 0.25s ease;
-    transition:all 0.25s ease;*/
-}
-
-/*ul.summary li h3:hover {
-    background-color: rgba(0, 0, 0, 0.12);
-}*/
-
 
 span.coverageData {
     font-size: 24px;
