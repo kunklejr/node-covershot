@@ -1,6 +1,6 @@
 {
   "name": "covershot",
-  "description": "Code coverage report generator that's easy on the eyes",
+  "description": "Multi-format, test framework agnostic, code coverage report generator.",
   "author": "Jeff Kunkle <jeff.kunkle@nearinfinity.com>",
   "keywords": [
     "test",
