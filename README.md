@@ -21,7 +21,7 @@ var myLibrary = csrequire('../lib/myLibrary');
 jscoverage --no-highlight lib lib-cov
 ```
 
-- generate code metrics (optional) using [jsmeter](https://github.com/joeferner/node-jsmeter)
+- generate code metrics (optional) using [jsmeter2](https://github.com/joeferner/node-jsmeter)
 
 ```bash
 ./node_modules/node-jsmeter/bin/jsmeter.js -o ./covershot/jsmeter/ ./lib/
