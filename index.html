@@ -10,57 +10,228 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Node-covershot by mrohr</title>
+    <style type="text/css">
+      .screenshot{
+        border:2px solid #CCC;
+        margin-bottom:20px;
+        width:315px;
+        display:inline-block;
+      }
+      .ribbon{
+        position: absolute; top: 0; right: 0; border: 0; z-index:100; height:113px;
+      }
+      .feature{
+        width:340px;
+        padding:0 20px;
+        display:inline-block;
+        vertical-align:top;
+        text-align:left;
+      }
+      .inner{
+        position:relative;
+        width:800px;
+        z-index:2;
+      }
+      #main_content{
+        width:100%;
+      }
+      .banner{
+        width:800px;
+        position:relative;
+        margin:0 auto;
+        z-index:2;
+        display:block;
+      }
+      #head{
+        width:100%;
+        position:absolute;
+        left:0;
+        right:0;
+        height:113px;
+        z-index:1;
+        background: #4c4c4c; /* Old browsers */
+        background: -moz-linear-gradient(top, #4c4c4c 0%, #1c1c1c 91%, #131313 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(91%,#1c1c1c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #4c4c4c 0%,#1c1c1c 91%,#131313 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #4c4c4c 0%,#1c1c1c 91%,#131313 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #4c4c4c 0%,#1c1c1c 91%,#131313 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #4c4c4c 0%,#1c1c1c 91%,#131313 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+      }
+      #mobile-header{
+        display:none;
+      }
+      #downloads{
+        margin:0 auto;
+        width:620px;
+      }
+      @media (max-device-width: 800px) {
+        .banner{
+          display:none;
+      }
+      #mobile-header{
+        display:block;
+      }
+      #mobile-header .title{
+        color:#DDD;
+        padding-top:15px;
+        margin-bottom:30px;
+        text-shadow:none;
+      }
+      .ribbon{
+        height:70px;
+      }
+      #head{
+        height:70px;
+      }
+      .inner{
+        width:94%;
+      }
+      #downloads{
+        width:100%;
+      }
+      .feature{
+        width:90%;
+        margin:40px auto 0;
+        display:block;
+      }
+      .screenshot{
+        width:80%;
+        margin:0 auto;
+        display:block;
+      }
+      #downloads a{
+        width:96%;  
+      }
+    }
+    </style>
+    <title>Covershot</title>
   </head>
 
   <body>
     <div id="container">
+    <a href="https://github.com/nearinfinity/node-covershot">
+      <img class="ribbon"
+           src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" 
+           alt="Fork me on GitHub">      
+    </a>
+      <div id="head">
+      </div>
+      <img class="banner" src="images/banner.png"/>
       <div class="inner">
 
-        <header>
-          <h1>Node-covershot</h1>
-          <h2>Multi-format, test framework agnostic, code coverage report generator.</h2>
-        </header>
-
+        <section id="mobile-header">
+          <img class="title" src=""/>
+          <p>Description</p>
+        </section>
         <section id="downloads" class="clearfix">
-          <a href="https://github.com/mrohr/node-covershot/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/mrohr/node-covershot/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/mrohr/node-covershot" id="view-on-github" class="button"><span>View on GitHub</span></a>
+          <a href="https://github.com/nearinfinity/node-covershot/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/nearinfinity/node-covershot/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/nearinfinity/node-covershot" id="view-on-github" class="button"><span>View on GitHub</span></a>
         </section>
-
-        <hr>
-
         <section id="main_content">
-          <h3>Welcome to GitHub Pages.</h3>
+          
+          <h1 style="margin:20px 0;">Features</h1>
+          <div class="feature">
+            <h3>Require</h3>
+            <p>Use covershot's require in your unit tests to display the different parts you want in the report.</p>
+          </div>
+          <img class="screenshot" src=""/>
+          <div class="feature">
+            <h3>JSCoverage</h3>
+            <p>Instrument your code using JSCoverage to measure the coverage.</p>
+          </div>    
+          <img class="screenshot" src=""/>
+          
+          <div class="feature">
+            <h3>View Key Values</h3>
+            <p>View individual key values with paging support for lists/sorted sets</p>
+          </div>   
+          <img class="screenshot" src=""/>
+          
+          <div class="feature">
+            <h3>Run Tests</h3>
+            <p>Run each unit test to be reported on.</p>
+          </div> 
+          <img class="screenshot" src=""/>
+          
+          <div class="feature">
+            <h3>Generate Code Metrics</h3>
+            <p>Create metrics for the measurement of each property.</p>
+          </div>
+          <img class="screenshot" src=""/>
+          
+          <div class="feature">
+            <h3>Coverage Report</h3>
+            <p>Generates a coverage report for the code tha you are currently testing to show the how throughly it is being tested.</p>
+          </div>
+          <img class="screenshot" src=""/>
+          
+          <h2>Installation</h2>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+          <pre><code>$ npm install covershot
+          </code></pre>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+          <h2>Usage</h2>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+          <ul>
+          <li>use covershot's require in your unit tests</li>
+          </ul><div class="highlight"><pre><span class="kd">var</span> <span class="nx">csrequire</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'covershot'</span><span class="p">).</span><span class="nx">require</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">require</span><span class="p">);</span>
+          <span class="kd">var</span> <span class="nx">myLibrary</span> <span class="o">=</span> <span class="nx">csrequire</span><span class="p">(</span><span class="s1">'../lib/myLibrary'</span><span class="p">);</span>
+          </pre></div>
 
-<h3>Designer Templates</h3>
+          <ul>
+          <li>instrument your code using <a href="http://siliconforks.com/jscoverage/">jscoverage</a>
+          </li>
+          </ul><div class="highlight"><pre>jscoverage --no-highlight lib lib-cov
+          </pre></div>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+          <ul>
+          <li>generate code metrics (optional) using <a href="https://github.com/joeferner/node-jsmeter">jsmeter2</a>
+          </li>
+          </ul><div class="highlight"><pre>./node_modules/node-jsmeter/bin/jsmeter.js -o ./covershot/jsmeter/ ./lib/
+          </pre></div>
 
-<h3>Rather Drive Stick?</h3>
+          <ul>
+          <li>run your unit tests</li>
+          </ul><div class="highlight"><pre>npm <span class="nb">test</span>
+          </pre></div>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+          <ul>
+          <li>generate a coverage report</li>
+          </ul><div class="highlight"><pre>./node_modules/covershot/bin/covershot covershot/data -f html -f clover -f json
+          </pre></div>
 
-<h3>Authors and Contributors</h3>
+          <h2>Example report</h2>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+          <p><img src="https://github.com/nearinfinity/node-covershot/raw/master/examples/coverage.png" alt="coverage!"></p>
 
-<h3>Support or Contact</h3>
+          <h2>License</h2>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
+          <p>(The MIT License)</p>
 
+          <p>Copyright (c) 2012 Near Infinity Corporation</p>
+
+          <p>Permission is hereby granted, free of charge, to any person obtaining
+          a copy of this software and associated documentation files (the
+          "Software"), to deal in the Software without restriction, including
+          without limitation the rights to use, copy, modify, merge, publish,
+          distribute, sublicense, and/or sell copies of the Software, and to
+          permit persons to whom the Software is furnished to do so, subject to
+          the following conditions:</p>
+
+          <p>The above copyright notice and this permission notice shall be
+          included in all copies or substantial portions of the Software.</p>
+
+          <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+          EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+          MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+          NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+          LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+          OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+          WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
         <footer>
-          Node-covershot is maintained by <a href="https://github.com/mrohr">mrohr</a><br>
+          Covershot is maintained by <a href="https://github.com/nearinfinity">Near Infinity</a><br>
           This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
         </footer>
 
