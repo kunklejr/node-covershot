@@ -44,10 +44,6 @@
       }
       #head{
         width:100%;
-        position:absolute;
-        left:0;
-        right:0;
-        height:113px;
         z-index:1;
         background: #4c4c4c; /* Old browsers */
         background: -moz-linear-gradient(top, #4c4c4c 0%, #1c1c1c 91%, #131313 100%); /* FF3.6+ */
@@ -63,6 +59,7 @@
       }
       #downloads{
         margin:0 auto;
+        padding-top:15px;
         width:620px;
       }
       @media (max-device-width: 800px) {
@@ -116,8 +113,9 @@
            alt="Fork me on GitHub">      
     </a>
       <div id="head">
+        <img class="banner" src="images/covershot_header_no_background.png"/>
       </div>
-      <img class="banner" src="images/banner.png"/>
+
       <div class="inner">
 
         <section id="mobile-header">
@@ -136,75 +134,41 @@
             <h3>Require</h3>
             <p>Use covershot's require in your unit tests to display the different parts you want in the report.</p>
           </div>
-          <img class="screenshot" src=""/>
+          </ul><div class="highlight"><pre><span class="kd">var</span> <span class="nx">csrequire</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'covershot'</span><span class="p">).</span><span class="nx">require</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">require</span><span class="p">);</span>
+          <span class="kd" style="margin-left: -80px;">var</span> <span class="nx">myLibrary</span> <span class="o">=</span> <span class="nx">csrequire</span><span class="p">(</span><span class="s1">'../lib/myLibrary'</span><span class="p">);</span>
+          </pre></div> 
+
           <div class="feature">
             <h3>JSCoverage</h3>
             <p>Instrument your code using JSCoverage to measure the coverage.</p>
           </div>    
-          <img class="screenshot" src=""/>
-          
-          <div class="feature">
-            <h3>View Key Values</h3>
-            <p>View individual key values with paging support for lists/sorted sets</p>
-          </div>   
-          <img class="screenshot" src=""/>
+          <div class="highlight"><pre>jscoverage --no-highlight lib lib-cov
+          </pre></div>          
           
           <div class="feature">
             <h3>Run Tests</h3>
             <p>Run each unit test to be reported on.</p>
           </div> 
-          <img class="screenshot" src=""/>
-          
+          <div class="highlight"><pre>npm <span class="nb">test</span>
+          </pre></div>   
+
           <div class="feature">
             <h3>Generate Code Metrics</h3>
             <p>Create metrics for the measurement of each property.</p>
           </div>
-          <img class="screenshot" src=""/>
-          
+          <div class="highlight"><pre>./node_modules/node-jsmeter/bin/jsmeter.js -o ./covershot/jsmeter/ ./lib/
+          </pre></div>
+
           <div class="feature">
             <h3>Coverage Report</h3>
             <p>Generates a coverage report for the code tha you are currently testing to show the how throughly it is being tested.</p>
           </div>
-          <img class="screenshot" src=""/>
+          <p><img src="https://github.com/nearinfinity/node-covershot/raw/master/examples/coverage.png" alt="coverage!"></p>
           
           <h2>Installation</h2>
 
           <pre><code>$ npm install covershot
           </code></pre>
-
-          <h2>Usage</h2>
-
-          <ul>
-          <li>use covershot's require in your unit tests</li>
-          </ul><div class="highlight"><pre><span class="kd">var</span> <span class="nx">csrequire</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'covershot'</span><span class="p">).</span><span class="nx">require</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">require</span><span class="p">);</span>
-          <span class="kd">var</span> <span class="nx">myLibrary</span> <span class="o">=</span> <span class="nx">csrequire</span><span class="p">(</span><span class="s1">'../lib/myLibrary'</span><span class="p">);</span>
-          </pre></div>
-
-          <ul>
-          <li>instrument your code using <a href="http://siliconforks.com/jscoverage/">jscoverage</a>
-          </li>
-          </ul><div class="highlight"><pre>jscoverage --no-highlight lib lib-cov
-          </pre></div>
-
-          <ul>
-          <li>generate code metrics (optional) using <a href="https://github.com/joeferner/node-jsmeter">jsmeter2</a>
-          </li>
-          </ul><div class="highlight"><pre>./node_modules/node-jsmeter/bin/jsmeter.js -o ./covershot/jsmeter/ ./lib/
-          </pre></div>
-
-          <ul>
-          <li>run your unit tests</li>
-          </ul><div class="highlight"><pre>npm <span class="nb">test</span>
-          </pre></div>
-
-          <ul>
-          <li>generate a coverage report</li>
-          </ul><div class="highlight"><pre>./node_modules/covershot/bin/covershot covershot/data -f html -f clover -f json
-          </pre></div>
-
-          <h2>Example report</h2>
-
-          <p><img src="https://github.com/nearinfinity/node-covershot/raw/master/examples/coverage.png" alt="coverage!"></p>
 
           <h2>License</h2>
 
