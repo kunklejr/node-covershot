@@ -39,6 +39,23 @@ npm test
 ./node_modules/covershot/bin/covershot covershot/data -f [html|clover|json]
 ```
 
+## Configuration
+
+Covershot assumes your files under test are in a `lib/` directory. If
+that's not the case, you can call the `replace` function prior to
+requiring your library to configure it to change other paths as well.
+For example:
+
+```javascript
+var covershot = require('covershot');
+
+// replace all paths containing a 'routes' component with 'routes-cov'
+covershot.replace('routes', 'routes-cov');
+
+var csrequire = covershot.require.bind(null, require);
+var myLibrary = csrequire('../lib/myLibrary');
+```
+
 ## Example report
 
 ![coverage!](https://github.com/nearinfinity/node-covershot/raw/master/examples/coverage.png)
