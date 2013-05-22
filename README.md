@@ -36,7 +36,7 @@ npm test
 - generate a coverage report
 
 ```bash
-./node_modules/covershot/bin/covershot covershot/data -f [html|clover|json]
+./node_modules/covershot/bin/covershot covershot/data -f [html|clover|json|lcov]
 ```
 
 ## Configuration

@@ -9,7 +9,7 @@ var argv = optimist
   .options('f', {
     alias: 'format',
     default: 'html',
-    describe: 'Desired output format. [html, json, plain]'
+    describe: 'Desired output format. [html, json, clover, lcov]'
   })
   .options('m', {
     alias: 'map',
